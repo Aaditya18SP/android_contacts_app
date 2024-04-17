@@ -1,0 +1,384 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditFriend">
+
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/tbEditfriendactivity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/yellow"
+            app:title="Edit Friend "
+            app:titleTextAppearance="@style/AddfrndToolbar"
+            app:titleTextColor="@color/black" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <ScrollView
+        android:id="@+id/svEditMainscrollview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/appBarLayout4">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivEditProfilepic"
+                style="@style/Profilepicapperance"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/defaultprofilepic"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <TextView
+                android:id="@+id/tvEditChoosephoto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="@string/choosephoto"
+                app:layout_constraintEnd_toEndOf="@+id/ivEditProfilepic"
+                app:layout_constraintStart_toStartOf="@+id/ivEditProfilepic"
+                app:layout_constraintTop_toBottomOf="@+id/ivEditProfilepic" />
+
+            <TextView
+                android:id="@+id/tvEditPersonaldetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/personaldetailsheading"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditChoosephoto" />
+
+            <TextView
+                android:id="@+id/tvEditFirstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/firstname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditPersonaldetails" />
+
+            <EditText
+                android:id="@+id/etEditFirstname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="textCapSentences|textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditFirstname" />
+
+            <TextView
+                android:id="@+id/tvEditLastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/lastname"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditFirstname" />
+
+            <EditText
+                android:id="@+id/etEditLastname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="textCapSentences|textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditLastname" />
+
+            <TextView
+                android:id="@+id/tvEditBirthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/birthdate"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditLastname" />
+
+            <EditText
+                android:id="@+id/etEditBirthdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="date"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditBirthdate" />
+
+            <TextView
+                android:id="@+id/tvEditContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/contactheading"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditBirthdate" />
+
+            <TextView
+                android:id="@+id/tvEditPhoneno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/secular_one"
+                android:text="@string/phoneno"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditContact" />
+
+            <EditText
+                android:id="@+id/etEditPhoneno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="phone"
+                android:maxLength="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditPhoneno" />
+
+            <CheckBox
+                android:id="@+id/cbEditSameWhatsappnoAsPhoneno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/checkvalueIsSameForWhatsappNumber"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditPhoneno" />
+
+            <TextView
+                android:id="@+id/tvEditWhatsappno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/whatsappno"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/cbEditSameWhatsappnoAsPhoneno" />
+
+            <EditText
+                android:id="@+id/etEditWhatsappno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="phone"
+                android:maxLength="10"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditWhatsappno" />
+
+            <TextView
+                android:id="@+id/tvEditEmailid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/emailid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditWhatsappno" />
+
+            <EditText
+                android:id="@+id/etEditEmailid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+
+                android:inputType="textEmailAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditEmailid" />
+
+            <TextView
+                android:id="@+id/tvEditAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/address"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditEmailid" />
+
+            <EditText
+                android:id="@+id/etEditAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="textMultiLine|textPostalAddress"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditAddress" />
+
+            <TextView
+                android:id="@+id/tvEditInstaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/instaid"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditAddress" />
+
+            <EditText
+                android:id="@+id/etEditInstaid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:hint="@string/instaidexample"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditInstaid" />
+
+            <TextView
+                android:id="@+id/tvEditHobbiesandfav"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/hobbiesandfavouritesheading"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditInstaid" />
+
+            <TextView
+                android:id="@+id/tvEditHobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/Hobby"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditHobbiesandfav" />
+
+            <EditText
+                android:id="@+id/etEditHobby"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+
+                android:inputType="textCapSentences|textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditHobby" />
+
+            <TextView
+                android:id="@+id/tvEditFavmusician"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/favmusician"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditHobby" />
+
+            <EditText
+                android:id="@+id/etEditFavmusician"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="textCapSentences|textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditFavmusician" />
+
+            <TextView
+                android:id="@+id/tvEditFavcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/favcolor"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditFavmusician" />
+
+            <EditText
+                android:id="@+id/etEditFavcolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="textCapSentences|textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditFavcolor" />
+
+
+            <TextView
+                android:id="@+id/tvEditFavmovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:fontFamily="@font/secular_one"
+                android:text="@string/favmovie"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/etEditFavcolor" />
+
+            <EditText
+                android:id="@+id/etEditFavmovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dp"
+                android:autofillHints=""
+                android:ems="10"
+                android:fontFamily="@font/secular_one"
+                android:inputType="textCapSentences|textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvEditFavmovie" />
+
+            <ImageView
+                android:id="@+id/ivEditCalendarIcon"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/ic_event_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/etEditBirthdate"
+                app:layout_constraintStart_toEndOf="@+id/etEditBirthdate"
+                app:layout_constraintTop_toTopOf="@+id/etEditBirthdate" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

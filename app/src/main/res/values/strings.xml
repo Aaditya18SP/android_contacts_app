@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Friendly</string>
+    <string name="choosephoto">Choose a photo</string>
+    <string name="personaldetailsheading">Personal Details</string>
+    <string name="firstname">First Name</string>
+    <string name="lastname">Last Name</string>
+    <string name="birthdate">Birth Date</string>
+    <string name="contactheading">Contact</string>
+    <string name="phoneno">Phone</string>
+    <string name="whatsappno">Whatsapp Number</string>
+    <string name="emailid">Email</string>
+    <string name="address">Address</string>
+    <string name="instaid">Instagram id(profile link)</string>
+    <string name="instaidexample">Eg:https://instagram.com/viratkohli?igshid=YmMyMTA2MY2Y=</string>
+    <string name="hobbiesandfavouritesheading">Hobbies and Favourites</string>
+    <string name="Hobby">Hobby</string>
+    <string name="favmusician">Favourite Musician</string>
+    <string name="favcolor">Favourite Colour</string>
+    <string name="favmovie">Favourite Movie</string>
+
+    <string name="yourfriends">Your Friends </string>
+    <string name="friendyour">Your Friend </string>
+    <string name="about">About</string>
+    <string name="call">call</string>
+    <string name="whatsapp">Whatsapp</string>
+    <string name="instagram">Instagram</string>
+    <string name="checkvalueIsSameForWhatsappNumber">Same for Whatsapp</string>
+
+
+</resources>

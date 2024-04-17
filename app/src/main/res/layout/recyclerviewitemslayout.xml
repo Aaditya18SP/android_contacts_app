@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvEachFriend"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:id="@+id/llrow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfilepicrecyclerview"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:contentDescription="TODO"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar_1" />
+
+            <TextView
+                android:id="@+id/tvFrienddesc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|fill_horizontal"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="4"
+                android:fontFamily="@font/secular_one"
+                android:hint="name of the friend"
+                android:textSize="15sp"
+                app:layout_constraintStart_toEndOf="@+id/ivProfilepicrecyclerview"
+                tools:layout_editor_absoluteY="68dp" />
+
+            <ImageView
+                android:id="@+id/ivCallicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_weight="1"
+                android:contentDescription="TODO"
+                android:src="@drawable/ic_chevron_right_black_24dp"
+                app:layout_constraintBottom_toBottomOf="@+id/tvFrienddesc"
+                app:layout_constraintStart_toEndOf="@+id/tvFrienddesc"
+                app:layout_constraintTop_toTopOf="@+id/tvFrienddesc" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
